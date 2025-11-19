@@ -1,0 +1,378 @@
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    background: #ffffff;
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-primary:hover,
+.signup:hover {
+    background: #083d91;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.25s ease;
+}
+
+
+/* ================= HEADER ================= */
+header {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.logo-img {
+    width: 32px;    
+    height: 32px;
+    object-fit: contain;
+}
+
+
+nav a {
+    margin-left: 20px;
+    font-size: 15px;
+    color: #444;
+}
+
+.signup {
+    background: #0a51c0;
+    color: white !important;
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    color: #0a51c0;
+    transition: 0.25s ease;
+}
+
+/* ================= HERO ================= */
+.hero {
+    padding: 80px 0;
+}
+
+.hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #111;
+}
+
+.hero-text h2 {
+    font-size: 26px;
+    font-weight: 500;
+    margin-top: -10px;
+    color: #333;
+}
+
+.hero-text p {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #555;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #0a51c0;
+    color: white;
+    padding: 14px 26px;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+.hero-img img {
+    width: 420px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.8);
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.2s forwards ease;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= FITUR ================= */
+.fitur {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.fitur-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 100px;
+}
+
+.fitur-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.fitur-card {
+    background: #f3f3f3;
+    border-radius: 16px;
+    box-shadow: 0 0 16px rgba(0,0,0,0.20);
+    padding-bottom: 20px;
+    border: 1px solid;
+}
+
+.fitur-head {
+    background: #0a51c0;
+    padding: 16px;
+    border-radius: 16px 16px 0 0;
+    color: white;
+    font-weight: 600;
+}
+
+.fitur-card p {
+    padding: 15px;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.fitur-card {
+    transition: 0.25s ease;
+}
+
+.fitur-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+}
+
+.fitur-deskripsi-bawah {
+    width: 70%;
+    margin: 40px auto 0;
+    text-align: center;
+    font-size: 17px;
+    color: #000;
+    line-height: 1.6;
+}
+
+
+/* ================= CTA ================= */
+.cta {
+    padding: 80px 0;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 25px 0;
+}
+
+.footer-links a {
+    margin: 0 12px;
+    color: #ddd;
+}
+
+.footer-links a {
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.footer-links a:hover {
+    transform: translateY(-3px);
+    color: #fff;
+}
+
+.footer-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+
+    .hero-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img img {
+        width: 300px;
+        margin-top: 40px;
+    }
+
+    .fitur-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .fitur-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   NEW LOGIN & REGISTER UI 
+   ========================================== */
+
+.form-wrapper {
+    width: 100%;
+    max-width: 450px;
+    margin: 80px auto;
+    background: #071627; /* navy gelap */
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    text-align: center;
+    position: relative;
+}
+
+.form-wrapper h1 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.form-wrapper h2 {
+    font-size: 20px;
+    color: #e0e6ed;
+    margin-bottom: 35px;
+    font-weight: 600;
+}
+
+.form-wrapper input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.form-wrapper input:focus {
+    outline: 2px solid #007bff;
+}
+
+.form-wrapper button {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.25s;
+}
+
+.form-wrapper button:hover {
+    background: #005ee0;
+}
+
+/* Link di bawah form */
+.form-wrapper .link-text {
+    margin-top: 20px;
+    color: #e0e6ed;
+    font-size: 15px;
+}
+
+.form-wrapper .link-text a {
+    color: #4cc9f0;
+    font-weight: 600;
+}
+
+.form-wrapper .forgot {
+    text-align: right;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.form-wrapper .forgot a {
+    color: #4cc9f0;
+}
+
+
+/* =================== Button Kembali =================== */
+
+.btn-kembali {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: #f0f0f0;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    transition: .2s ease;
+}
+
+.btn-kembali:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+}
